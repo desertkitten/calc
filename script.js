@@ -42,3 +42,13 @@ function inputDigit(digit) {
         display.textContent += digit;
     }
 }
+
+function inputDecimal() {
+    if (shouldResetDisplay) {
+        display.textContent = '0';
+        shouldResetDisplay = false;
+    }
+    if (!display.textContent.includes('.')) {
+        display.textContent += '.';
+    }
+}
