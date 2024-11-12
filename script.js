@@ -52,3 +52,10 @@ function inputDecimal() {
         display.textContent += '.';
     }
 }
+
+function inputOperator(operator) {
+    if (currentOperator !== null) calculate();
+    firstNumber = display.textContent;
+    currantOperator = operator;
+    shouldResetDisplay = true;
+}
