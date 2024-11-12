@@ -59,3 +59,13 @@ function inputOperator(operator) {
     currantOperator = operator;
     shouldResetDisplay = true;
 }
+
+function calculate() {
+    if (currentOperator === null || shouldResetDisplay) return;
+
+    secondNumber = display.textContent;
+    display.textContent = roundResult(
+        operate(currentOperator, parseFloat(firstNumber), parseFloat(secondNumber))
+    );
+    currentOperator = null;
+}
